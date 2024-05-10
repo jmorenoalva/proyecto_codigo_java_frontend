@@ -5,10 +5,10 @@ import LoginFondo from "../components/LoginFondo/Loginfondo";
 const Login = () => {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <LoginFondo/>
         <Contenedor/>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </>
   )
 }

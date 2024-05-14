@@ -112,7 +112,10 @@ const Contenedor = () => {
     console.log('Estoy enviando las credenciales del usuario', form)
     const data= await login(form);
     console.log(data)
-    setToken(data.token)
+    if (data) {
+      setToken(data.token)
+      navigate("/dashboard");
+    }
   }
 
   return (

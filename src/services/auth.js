@@ -8,7 +8,8 @@ export const login = async ({usuario, password})=>{
     body: JSON.stringify({
       usuario,
       password
-    })
+    }),
+    mode: "cors"
   };
 
   console.log(options)

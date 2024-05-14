@@ -1,9 +1,8 @@
 import { useState } from 'react';
-// import "./style.css"
+import {login} from '../../services/auth'
 import bg from './car.svg'
 import logo from './logo.png'
 import Swal from "sweetalert2"
-import { FaLock, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom"
 
 const Contenedor = () => {
@@ -95,6 +94,27 @@ const Contenedor = () => {
     })
   }
 
+  const initialState={
+    // username:'',
+    // password:''
+  }
+
+  const [form, setForm]=useState(initialState)
+  const [token, setToken]=useState('')
+
+  const handleChange=(event)=>{
+    const {name, value}= event.target;
+    setForm({...form, [name]:value})
+  }
+
+  const handleLogin = async (event)=>{
+    event.preventDefault();
+    console.log('Estoy enviando las credenciales del usuario', form)
+    const data= await login(form);
+    console.log(data)
+    setToken(data.token)
+  }
+
   return (
     <>
       <div className="flex justify-center items-center h-screen gap-10">
@@ -103,26 +123,38 @@ const Contenedor = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center h-full space-y-4 w-full md:w-1/2 max-w-md">
-          <form className="w-full md:w-90 max-w-xs" action="">
-          {/* <form className="w-full" action=""> */}
+          <form
+            className="w-full md:w-90 max-w-xs"
+            action=""
+            onSubmit={handleLogin}
+          >
+            {/* <form className="w-full" action=""> */}
             <img src={logo} alt="" />
             <h2 className="text-center w-80">Renta de autos</h2>
-            <div className='flex flex-col'>
-                <h5 className="text-gray-700 font-bold mt-2">Usuario</h5>
-                <input
-                  type="text"
-                  id="user"
-                  className="border border-gray-300 py-2 px-4 rounded-md mt-1 w-full"
-                />
+            <div className="flex flex-col">
+              <h5 className="text-gray-700 font-bold mt-2">Usuario</h5>
+              <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                className="border border-gray-300 py-2 px-4 rounded-md mt-1 w-full"
+                autoComplete="usuario"
+                onChange={handleChange}
+                value={form.usuario}
+              />
             </div>
 
             <div>
-                <h5 className="text-gray-700 font-bold mt-2 ">Password</h5>
-                <input
-                  type="password"
-                  id="password"
-                  className="border border-gray-300 py-2 px-4 rounded-md mt-1 w-full"
-                />
+              <h5 className="text-gray-700 font-bold mt-2 ">Password</h5>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                className="border border-gray-300 py-2 px-4 rounded-md mt-1 w-full"
+                autoComplete="current-password"
+                onChange={handleChange}
+                value={form.password}
+              />
             </div>
             <Link className="text-blue-500 hover:underline">
               ¿Olvido su Contraseña?

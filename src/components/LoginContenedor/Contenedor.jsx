@@ -125,7 +125,7 @@ const Contenedor = () => {
           <img src={bg} alt="" className="w-3/4 md:w-auto" />
         </div>
 
-        <div className="flex flex-col justify-center items-center h-full space-y-4 w-full md:w-1/2 max-w-md">
+        <div className="flex flex-col justify-center items-center h-full space-y-4 w-full md:w-1/2 max-w-md dark:bg-[#090e16] bg-white">
           <form
             className="w-full md:w-90 max-w-xs"
             action=""

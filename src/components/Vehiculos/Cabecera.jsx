@@ -43,7 +43,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
             <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8">
-              <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+              <div className="dark:bg-[#111827] bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 dark:text-white text-black">
                 <div className="sm:flex sm:items-start">
                   <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                     {/* FORMULARIO */}
@@ -58,6 +58,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Codigo</label>
                           <input
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="codigo"
                             type="text"
                             onChange={handleChange}
@@ -67,6 +68,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Placa</label>
                           <input
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="placa"
                             type="text"
                             id="placa"
@@ -77,6 +79,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Asientos</label>
                           <input
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="asientos"
                             type="number"
                             onChange={handleChange}
@@ -89,6 +92,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Fabricacion</label>
                           <input
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="anioFabricacion"
                             type="number"
                             onChange={handleChange}
@@ -98,6 +102,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Color</label>
                           <input
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="color"
                             type="text"
                             onChange={handleChange}
@@ -109,7 +114,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                           <select
                             name="transmision"
                             id=""
-                            className="w-full"
+                            className="w-full dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             onChange={handleChange}
                             value={form.transmision}
                           >
@@ -126,6 +131,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Tipo Vehiculo</label>
                           <select
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="tipoVehiculo"
                             id=""
                             onChange={handleChange}
@@ -139,6 +145,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Marca</label>
                           <select
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="marca"
                             id=""
                             onChange={handleChange}
@@ -152,6 +159,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Costo</label>
                           <input
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="costoAlquiler"
                             type="number"
                             onChange={handleChange}
@@ -164,6 +172,7 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                         <div className="px-2 flex flex-col w-4/6">
                           <label htmlFor="">Combustible</label>
                           <select
+                            className="dark:text-white text-black dark:bg-[#3e4652] bg-white"
                             name="combustible"
                             id=""
                             multiple
@@ -191,7 +200,8 @@ const Cabecera = ({ action = "Creacion", setIsOpen }) => {
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+              <hr className="bg-[#6a7280]" />
+              <div className=" px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 dark:bg-[#111827] bg-white">
                 <button
                   type="submit"
                   form="vehiculosForm"

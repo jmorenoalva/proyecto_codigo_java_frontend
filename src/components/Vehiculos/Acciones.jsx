@@ -4,10 +4,10 @@ import { MdDelete } from "react-icons/md";
 const Acciones = () => {
   return (
     <>
-      <button>
+      <button className="text-yellow-400 text-xl mx-2">
         <MdEdit />
       </button>
-      <button>
+      <button className="text-red-500 text-xl">
         <MdDelete />
       </button>
     </>

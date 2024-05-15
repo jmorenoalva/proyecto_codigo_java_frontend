@@ -7,82 +7,55 @@ import Acciones from "./Acciones";
 
 
 
-const Tabla = () => {
+const Tabla = ({ rowData }) => {
 
-    const [rowData, setRowData] = useState([
-      {
-        Codigo: "001",
-        Placa: "QWE-345",
-        Asientos: 4,
-        Fabricacion: 2020,
-        Color: "Rojo",
-        Transmision: "Automatico",
-        Marca: "Toyota",
-        Tipo: "Camioneta",
-        Costo: 150.0,
+  const [colDefs, setColDefs] = useState([
+    {
+      field: "Codigo",
+      maxWidth: 80,
+    },
+    {
+      field: "Placa",
+      maxWidth: 120,
+    },
+    {
+      field: "Asientos",
+      maxWidth: 120,
+    },
+    {
+      field: "Fabricacion",
+    },
+    {
+      field: "Color",
+    },
+    {
+      field: "Transmision",
+    },
+    {
+      field: "Marca",
+    },
+    {
+      field: "Tipo",
+    },
+    {
+      field: "Costo",
+    },
+    {
+      field: "Acciones",
+      cellRenderer: Acciones,
+    },
+  ]);
 
-      },
-      {
-        Codigo: "002",
-        Placa: "AWE-123",
-        Asientos: 4,
-        Fabricacion: 2020,
-        Color: "Rojo",
-        Transmision: "Mecanico",
-        Marca: "Nissan",
-        Tipo: "Camioneta",
-        Costo: 150.01,
-      },
-    ]);
-
-    const [colDefs, setColDefs] = useState([
-      {
-        field: "Codigo",
-      },
-      {
-        field: "Placa",
-      },
-      {
-        field: "Asientos",
-      },
-      {
-        field: "Fabricacion",
-      },
-      {
-        field: "Color",
-      },
-      {
-        field: "Transmision",
-      },
-      {
-        field: "Marca",
-      },
-      {
-        field: "Tipo",
-      },
-      {
-        field: "Costo",
-      },
-      {
-        field: "Acciones",
-        cellRenderer: Acciones,
-      },
-    ]);
-
-    return (
-      <>
-        <div
-          className="ag-theme-quartz-auto-dark" // applying the grid theme
-          style={{ height: 500 }}
-        >
-          <AgGridReact rowData={rowData} columnDefs={colDefs} />
-        </div>
-      </>
-    );
-
-
-
-
-}
+  return (
+    <>
+      <div
+        className="ag-theme-quartz-auto-dark" // applying the grid theme
+        style={{ height: 500 }}
+      >
+        <AgGridReact rowData={rowData} columnDefs={colDefs} />
+      </div>
+    </>
+  );
+};
 
 export default Tabla

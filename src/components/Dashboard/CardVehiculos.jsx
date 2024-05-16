@@ -18,7 +18,7 @@ export function CardVehiculos() {
         </p>
       </div>
       <p className="text-3xl text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
-        100
+        2
       </p>
     </Card>
   );

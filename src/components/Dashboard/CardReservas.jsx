@@ -17,7 +17,7 @@ export function CardReservas() {
         </p>
       </div>
       <p className="text-3xl text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
-        50
+        1
       </p>
     </Card>
   );

@@ -147,12 +147,12 @@ const Tabla = ({ rowData }) => {
           rowData={rowData}
           columnDefs={colDefs}
           onGridReady={onGridReady}
-          // pagination={true}
-          // paginationPageSize={10}
-          // paginationPageSizeSelector={[10, 20, 50, 100]}
-          // onPaginationChanged={(event) =>
-          //   onPaginationChange(event.api.paginationGetCurrentPage() + 1)
-          // }
+          pagination={true}
+          paginationPageSize={10}
+          paginationPageSizeSelector={[10, 20, 50, 100]}
+          onPaginationChanged={(event) =>
+            onPaginationChange(event.api.paginationGetCurrentPage() + 1)
+          }
         />
       </div>
     </>

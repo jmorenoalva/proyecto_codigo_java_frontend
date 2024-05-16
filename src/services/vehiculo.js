@@ -1,9 +1,10 @@
-export const listVehiculos = async () => {
+export const listVehiculos = async (token) => {
   const url = "http://localhost:8080/vehiculos/v1/vehiculos";
   const options = {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     mode: "cors",
   };
@@ -12,7 +13,7 @@ export const listVehiculos = async () => {
   return await response.json();
 };
 
-export const createVehiculo = async (object) => {
+export const createVehiculo = async () => {
   //   const url = "http://localhost:8080/security/auth/signin";
   //   const options = {
   //     method: "POST",

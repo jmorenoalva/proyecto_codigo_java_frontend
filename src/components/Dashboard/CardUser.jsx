@@ -17,7 +17,7 @@ export function CardUser() {
         </p>
       </div>
         <p className="text-3xl text-tremor-content-strong dark:text-dark-tremor-content-strong font-semibold">
-          10
+          2
         </p>
     </Card>
   );

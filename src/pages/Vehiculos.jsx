@@ -3,6 +3,7 @@ import Header from "../components/Header/Header";
 import Navigation from "../components/Sidebar/Navigation";
 import Cabecera from "../components/Vehiculos/Cabecera";
 import Tabla from "../components/Vehiculos/Tabla";
+import {listVehiculos} from "../services/vehiculo"
 
 const Vehiculos = () => {
 
@@ -24,10 +25,10 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2021,
-      Color: "Rojo",
+      Color: "Azul",
       Transmision: "Mecanico",
       Marca: "Nissan",
-      Tipo: "Camioneta",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -35,9 +36,9 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2022,
-      Color: "Rojo",
+      Color: "Plata",
       Transmision: "Mecanico",
-      Marca: "Nissan",
+      Marca: "Hyundai",
       Tipo: "Camioneta",
       Costo: 150.01,
     },
@@ -48,8 +49,8 @@ const Vehiculos = () => {
       Fabricacion: 2020,
       Color: "Rojo",
       Transmision: "Mecanico",
-      Marca: "Nissan",
-      Tipo: "Camioneta",
+      Marca: "Kia",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -57,7 +58,7 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2021,
-      Color: "Rojo",
+      Color: "Plata",
       Transmision: "Mecanico",
       Marca: "Nissan",
       Tipo: "Camioneta",
@@ -70,8 +71,8 @@ const Vehiculos = () => {
       Fabricacion: 2022,
       Color: "Rojo",
       Transmision: "Mecanico",
-      Marca: "Nissan",
-      Tipo: "Camioneta",
+      Marca: "Kia",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -81,8 +82,8 @@ const Vehiculos = () => {
       Fabricacion: 2023,
       Color: "Rojo",
       Transmision: "Mecanico",
-      Marca: "Nissan",
-      Tipo: "Camioneta",
+      Marca: "Honda",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -90,9 +91,9 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2024,
-      Color: "Rojo",
+      Color: "Plata",
       Transmision: "Mecanico",
-      Marca: "Nissan",
+      Marca: "Renault",
       Tipo: "Camioneta",
       Costo: 150.01,
     },
@@ -101,9 +102,9 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2020,
-      Color: "Rojo",
+      Color: "Negro",
       Transmision: "Mecanico",
-      Marca: "Nissan",
+      Marca: "Volkswagen",
       Tipo: "Camioneta",
       Costo: 150.01,
     },
@@ -114,8 +115,8 @@ const Vehiculos = () => {
       Fabricacion: 2021,
       Color: "Rojo",
       Transmision: "Mecanico",
-      Marca: "Nissan",
-      Tipo: "Camioneta",
+      Marca: "Toyota",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -123,9 +124,9 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2022,
-      Color: "Rojo",
+      Color: "Plata",
       Transmision: "Mecanico",
-      Marca: "Nissan",
+      Marca: "Toyota",
       Tipo: "Camioneta",
       Costo: 150.01,
     },
@@ -134,10 +135,10 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2023,
-      Color: "Rojo",
+      Color: "Blanco",
       Transmision: "Mecanico",
-      Marca: "Nissan",
-      Tipo: "Camioneta",
+      Marca: "Kia",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -156,10 +157,10 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2024,
-      Color: "Rojo",
+      Color: "Plata",
       Transmision: "Mecanico",
-      Marca: "Nissan",
-      Tipo: "Camioneta",
+      Marca: "Kia",
+      Tipo: "Sedan",
       Costo: 150.01,
     },
     {
@@ -167,17 +168,17 @@ const Vehiculos = () => {
       Placa: "AWE-123",
       Asientos: 4,
       Fabricacion: 2023,
-      Color: "Rojo",
+      Color: "Azul",
       Transmision: "Mecanico",
-      Marca: "Nissan",
+      Marca: "Toyota",
       Tipo: "Camioneta",
       Costo: 150.01,
     },
   ]);
 
-  const listVehiculos = () => {
-    // setRowData
-    //
+  const listVehiculos = async () => {
+    // const data=await listVehiculos(token)
+    // setRowData(data)
   };
 
   return (
